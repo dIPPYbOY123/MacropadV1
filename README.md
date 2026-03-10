@@ -13,15 +13,22 @@ MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary enc
 - **Compact Design**: Custom-designed 3D printable case for minimalistic vibe.
 - **KMK Firmware**: Easily customizable using Python.
 
-## 🛠 Hardware Components
+## � Bill of Materials (BOM)
 
-- **Controller**: Seeed Xiao RP2040
-- **Keys**: 6x Mechanical Switches (MX Style)
-- **Diodes**: 6x through-hole 1N4148 Diodes
-- **Encoder**: EC11 Rotary Encoder with Push Button
-- **Display**: 0.91" 128x32 I2C OLED
-- **LEDs**: 7x SK6812 Mini-E addressable RGB LEDs
-- **PCB**: Custom-designed 2-layer PCB
+| Component | Quantity | Specification |
+| :--- | :---: | :--- |
+| **Microcontroller** | 1 | Seeed Xiao RP2040 |
+| **Switches** | 6 | MX-style Mechanical Switches |
+| **Keycaps** | 6 | MX-compatible Keycaps |
+| **Rotary Encoder** | 1 | EC11 Encoder with Push Button |
+| **Encoder Knob** | 1 | 20mm Aluminum or Plastic Knob |
+| **OLED Display** | 1 | 0.91" 128x32 I2C OLED (SSD1306) |
+| **Diodes** | 6 | 1N4148 Through-hole Diodes |
+| **RGB LEDs** | 7 | SK6812 Mini-E (NeoPixel compatible) |
+| **PCB** | 1 | Custom MacropadV1 PCB |
+| **Cables** | 1 | USB-C Cable |
+| **Hardware** | 4 | M3 x 10mm Screws (for Case) |
+| **Case** | 1 | 3D Printed Top & Bottom Shell |
 
 ### Case Design
 The project includes a custom 3D printable case designed for a sleek, low-profile look.
