@@ -21,14 +21,12 @@ MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary enc
 | **Switches** | 6 | MX-style Mechanical Switches |
 | **Keycaps** | 6 | MX-compatible Keycaps |
 | **Rotary Encoder** | 1 | EC11 Encoder with Push Button |
-| **Encoder Knob** | 1 | 20mm Aluminum or Plastic Knob |
-| **OLED Display** | 1 | 0.91" 128x32 I2C OLED (SSD1306) |
+| **OLED Display** | 1 | 0.91" 128x32 I2C OLED |
 | **Diodes** | 6 | 1N4148 Through-hole Diodes |
-| **RGB LEDs** | 7 | SK6812 Mini-E (NeoPixel compatible) |
+| **RGB LEDs** | 7 | SK6812 Mini-E |
 | **PCB** | 1 | Custom MacropadV1 PCB |
-| **Cables** | 1 | USB-C Cable |
-| **Hardware** | 4 | M3 x 10mm Screws (for Case) |
-| **Case** | 1 | 3D Printed Top & Bottom Shell |
+| **Hardware** | 4 | M3 x 16mm Screws |
+| **Case** | 1 | 3D Printed Case |
 
 ### Case Design
 The project includes a custom 3D printable case designed for a sleek, low-profile look.
