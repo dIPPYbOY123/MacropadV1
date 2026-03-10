@@ -58,7 +58,7 @@ The PCB has been designed in KiCad.
 ### 3D Visualizations
 | Front | Back |
 | :---: | :---: |
-| ![PCB Front](media/pcb3D-1.png) | ![PCB Back](media/pcb3D-2.png) |
+| ![PCB Front](media/pcb3Dfront.png) | ![PCB Back](media/pcb3Dback.png) |
 
 ### Schematic
 ![Schematic](media/pcbschematic.png)
