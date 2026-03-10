@@ -2,7 +2,7 @@
 
 MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary encoder, an OLED display, and vibrant RGB lighting. Powered by the Seeeduino Xiao (Cortex-M0+) and running the flexible KMK firmware, it's a powerful tool for productivity, gaming, and creative workflows.
 
-![Macropad Render](media/topdownrender.png)
+![Macropad Render](media/angledrender.png)
 
 ## ✨ Features
 
@@ -15,7 +15,7 @@ MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary enc
 
 ## 🛠 Hardware Components
 
-- **Controller**: [Seeeduino Xiao](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) (SAMD21)
+- **Controller**: Seeeduino Xiao (SAMD21)
 - **Keys**: 6x Mechanical Switches (MX Style)
 - **Diodes**: 6x 1N4148 (SOD-123 or Through-hole)
 - **Encoder**: EC11 Rotary Encoder with Push Button
@@ -26,9 +26,9 @@ MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary enc
 ### Case Design
 The project includes a custom 3D printable case designed for a sleek, low-profile look.
 
-| Case Top-Down | Case Angled |
+| Case Angled View | Case Back View |
 | :---: | :---: |
-| ![Case Top](media/topdownrender.png) | ![Case Angled](media/caseangled.png) |
+| ![Case Angled View](media/caseangled.png) | ![Case Back View](media/caseback.png) |
 
 ## 🖥 Firmware
 
@@ -45,7 +45,7 @@ The rotary encoder is mapped to volume control by default.
 
 ## 🎨 PCB & Electronics
 
-Designed in KiCad, the PCB ensures a clean and reliable build.
+The PCB has been designed in KiCad.
 
 ### PCB Layout
 ![PCB Layout](media/pcb.png)
