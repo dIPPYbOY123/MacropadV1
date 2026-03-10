@@ -2,7 +2,7 @@
 
 MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary encoder, an OLED display, and vibrant RGB lighting. Powered by the Seeeduino Xiao (Cortex-M0+) and running the flexible KMK firmware, it's a powerful tool for productivity, gaming, and creative workflows.
 
-![Macropad Render](media/Screenshot%202026-03-09%20at%2012.37.25%20PM.png)
+![Macropad Render](media/topdownrender.png)
 
 ## ✨ Features
 
@@ -26,7 +26,9 @@ MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary enc
 ### Case Design
 The project includes a custom 3D printable case designed for a sleek, low-profile look.
 
-![Case Render](media/Screenshot%202026-03-09%20at%2012.38.25%20PM.png)
+| Case Top-Down | Case Angled |
+| :---: | :---: |
+| ![Case Top](media/topdownrender.png) | ![Case Angled](media/caseangled.png) |
 
 ## 🖥 Firmware
 
@@ -45,8 +47,16 @@ The rotary encoder is mapped to volume control by default.
 
 Designed in KiCad, the PCB ensures a clean and reliable build.
 
-![PCB Layout](media/Screenshot%202026-03-09%20at%2010.18.53%20PM.png)
-![Schematic](media/Screenshot%202026-03-09%20at%2010.20.10%20PM.png)
+### PCB Layout
+![PCB Layout](media/pcb.png)
+
+### 3D Visualizations
+| Front | Back |
+| :---: | :---: |
+| ![PCB Front](media/pcb3D-1.png) | ![PCB Back](media/pcb3D-2.png) |
+
+### Schematic
+![Schematic](media/pcbschematic.png)
 
 ## 📂 Project Structure
 
