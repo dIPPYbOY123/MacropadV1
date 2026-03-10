@@ -47,7 +47,7 @@ class DisplayManager(SSD1306_I2C):
         self.current_app = 0
         self.apps = ["STATUS", "MACROS", "ABOUT"]
         self.active_layer = 0
-        self.last_update = 0
+        self.last_update = 0.0
 
     def next_app(self):
         self.current_app = (self.current_app + 1) % len(self.apps)
