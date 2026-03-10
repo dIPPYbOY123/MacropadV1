@@ -1,23 +1,23 @@
 # MacropadV1
 
-MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary encoder, an OLED display, and vibrant RGB lighting. Powered by the Seeeduino Xiao (Cortex-M0+) and running the flexible KMK firmware, it's a powerful tool for productivity, gaming, and creative workflows.
+MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary encoder, an OLED display, and RGB lighting. It's powered by the Seeed Xiao RP2040 and running KMK firmware
 
 ![Macropad Render](media/angledrender.png)
 
 ## ✨ Features
 
-- **6 Mechanical Switches**: Hot-swappable support for your favorite MX switches.
-- **Rotary Encoder**: Smooth scrolling and volume control with a satisfying tactile click.
+- **6 Mechanical Switches**: MX-style switches.
+- **Rotary Encoder**: Smooth scrolling and volume control.
 - **OLED Display (128x32)**: Real-time feedback on layers, status, and custom animations.
-- **7 Addressable RGB LEDs**: Fully customizable underglow and per-key lighting effects.
-- **Compact Design**: Ergonomic layout with a custom-designed 3D printable case.
-- **KMK Firmware**: Easily customizable using Python—no complex compilation required.
+- **7 Addressable RGB LEDs**: Fully customizable underglow and per-key lighting.
+- **Compact Design**: Custom-designed 3D printable case for minimalistic vibe.
+- **KMK Firmware**: Easily customizable using Python.
 
 ## 🛠 Hardware Components
 
-- **Controller**: Seeeduino Xiao (SAMD21)
+- **Controller**: Seeed Xiao RP2040
 - **Keys**: 6x Mechanical Switches (MX Style)
-- **Diodes**: 6x 1N4148 (SOD-123 or Through-hole)
+- **Diodes**: 6x through-hole 1N4148 Diodes
 - **Encoder**: EC11 Rotary Encoder with Push Button
 - **Display**: 0.91" 128x32 I2C OLED
 - **LEDs**: 7x SK6812 Mini-E addressable RGB LEDs
