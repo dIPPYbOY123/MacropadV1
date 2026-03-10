@@ -14,7 +14,9 @@ from kmk.modules.encoder import EncoderHandler
 from kmk.extensions.rgb import RGB
 
 keyboard = KMKKeyboard()
-i2c = busio.I2C(board.SCL, board.SDA)
+
+# Display Pins: D4 (SDA), D5 (SCL)
+i2c = busio.I2C(board.D5, board.D4)
 
 macros = Macros()
 encoder_handler = EncoderHandler()
@@ -24,17 +26,18 @@ keyboard.modules.append(macros)
 keyboard.modules.append(Layers())
 
 # Matrix Configuration (3x2 grid)
-# Based on Schematic: 
-# Columns: D6, D7, D8
-# Rows: D10, D9
-keyboard.col_pins = (board.D6, board.D7, board.D8)
-keyboard.row_pins = (board.D10, board.D9)
+# User Specification:
+# Rows: Pin 8 (D7), Pin 9 (D8)
+# Cols: Pin 7 (D6), Pin 6 (D5), Pin 5 (D4)
+keyboard.col_pins = (board.D6, board.D5, board.D4)
+keyboard.row_pins = (board.D7, board.D8)
 keyboard.diode_orientation = DiodeOrientation.COL2ROW
 
-# Rotary Encoder Rotation: D0, D1
-encoder_handler.pins = ((board.D0, board.D1, None),)
+# Rotary Encoder Rotation: Pin 1 (D0), Pin 2 (D1)
+# Encoder Button: Pin 4 (D3)
+encoder_handler.pins = ((board.D0, board.D1, board.D3),)
 
-# RGB Lighting: Pin D2, 7 Pixels
+# RGB Lighting: Pin 3 (D2), 7 Pixels
 rgb = RGB(pixel_pin=board.D2, num_pixels=7)
 keyboard.extensions.append(rgb)
 
@@ -49,48 +52,31 @@ class Display(SSD1306_I2C):
 display = Display(128, 32, i2c)  
 keyboard.extensions.append(display)  
 
-# Keymap: 6 Switches + 1 Encoder Button (D3)
-# The Encoder Button is a separate trigger in this setup
-# We use a scanner extension or manual mapping if not in matrix
-# Since the matrix is 3x2, we have 6 keys. We'll add the encoder button as a 7th key.
-
+# Keymap: 6 Switches + 1 Encoder Button
+# The Encoder Button (D3) is handled by the EncoderHandler
 keyboard.keymap = [
     [ # Layer 0: Default
-        KC.MUTE,     KC.Macro(Press(KC.LCTRL), Tap(KC.C), Release(KC.LCTRL)), # Button 1, 2
-        KC.Macro(Press(KC.LCTRL), Tap(KC.V), Release(KC.LCTRL)), KC.Macro(Press(KC.LCTRL), Tap(KC.X), Release(KC.LCTRL)), # Button 3, 4
-        KC.MO(1),    KC.LT(2, KC.RGB_TOG), # Button 5, 6
-        KC.PLAY_PAUSE # Encoder Button (D3 - mapping added via scanner)
+        KC.MUTE,     KC.Macro(Press(KC.LCTRL), Tap(KC.C), Release(KC.LCTRL)), # Key 1, 2
+        KC.Macro(Press(KC.LCTRL), Tap(KC.V), Release(KC.LCTRL)), KC.Macro(Press(KC.LCTRL), Tap(KC.X), Release(KC.LCTRL)), # Key 3, 4
+        KC.MO(1),    KC.LT(2, KC.RGB_TOG), # Key 5, 6
     ],
     [ # Layer 1: Navigation/Macros
         KC.UNDO,     KC.REDO,
         KC.Macro(Press(KC.LGUI), Press(KC.LSHIFT), Tap(KC.S), Release(KC.LSHIFT), Release(KC.LGUI)), KC.SELECT_ALL,
         KC.TRNS,     KC.TRNS,
-        KC.MUTE
     ],
     [ # Layer 2: RGB Control
         KC.RGB_MODE_PLAIN, KC.RGB_MODE_BREATHE,
         KC.RGB_MODE_RAINBOW, KC.RGB_MODE_SWIRL,
         KC.RGB_SAI, KC.RGB_SAD,
-        KC.RGB_TOG
     ]
 ]
 
-# Adding Encoder Button on D3 as extra key
-keyboard.matrix_scanner = KeysScanner(
-    pins=(board.D6, board.D7, board.D8, board.D10, board.D9, board.D3),
-    # This scanner treats them as individual keys rather than a matrix for simplicity
-    # but since schematic shows a matrix for 6 keys and a separate D3 for encoder:
-)
-
-# Refined Matrix Scanner to combine matrix + individual pin
-# For simplicity with KMK, we'll use the MatrixScanner and add D3 to the sequence
-# Or better: redefine matrix as 3x3 with dummy pins if needed, but a single scanner is cleaner.
-
-# Wait, let's keep it simple: 6 keys in matrix, and use the encoder_handler for the button
+# Encoder Mapping: Volume, Navigation, RGB
 encoder_handler.map = [
-    [ (KC.VOLU, KC.VOLD) ], # Layer 0
-    [ (KC.VOLU, KC.VOLD) ], # Layer 1
-    [ (KC.RGB_HUI, KC.RGB_HUD) ] # Layer 2
+    [ (KC.VOLU, KC.VOLD, KC.PLAY_PAUSE) ], # Layer 0: Vol + Play/Pause
+    [ (KC.PGUP, KC.PGDN, KC.MUTE) ],       # Layer 1: Scroll + Mute
+    [ (KC.RGB_HUI, KC.RGB_HUD, KC.RGB_TOG) ] # Layer 2: Color + Toggle
 ]
 
 # Initial Display
