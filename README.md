@@ -4,7 +4,7 @@ MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary enc
 
 ![Macropad Render](media/angledrender.png)
 
-## ✨ Features
+## Features
 
 - **6 Mechanical Switches**: MX-style switches.
 - **Rotary Encoder**: Smooth scrolling and volume control.
@@ -13,7 +13,7 @@ MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary enc
 - **Compact Design**: Custom-designed 3D printable case for minimalistic vibe.
 - **KMK Firmware**: Easily customizable using Python.
 
-## � Bill of Materials (BOM)
+## Bill of Materials (BOM)
 
 | Component | Quantity | Specification |
 | :--- | :---: | :--- |
@@ -35,7 +35,7 @@ The project includes a custom 3D printable case designed for a sleek, low-profil
 | :---: | :---: |
 | ![Case Angled View](media/caseangled.png) | ![Case Back View](media/caseback.png) |
 
-## 🖥 Firmware
+## Firmware
 
 MacropadV1 runs on **KMK Firmware**, a feature-rich keyboard firmware written in CircuitPython.
 
@@ -48,7 +48,7 @@ The default keymap includes dedicated layers for media control, macros (Copy/Pas
 
 The rotary encoder is mapped to volume control by default.
 
-## 🎨 PCB & Electronics
+## PCB & Electronics
 
 The PCB has been designed in KiCad.
 
@@ -63,7 +63,7 @@ The PCB has been designed in KiCad.
 ### Schematic
 ![Schematic](media/pcbschematic.png)
 
-## 📂 Project Structure
+## Project Structure
 
 - `firmware/`: KMK configuration (`main.py`)
 - `pcb/`: KiCad project files
