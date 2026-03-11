@@ -1,6 +1,6 @@
 # MacropadV1
 
-MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary encoder, an OLED display, and RGB lighting. It's powered by the Seeed Xiao RP2040 and running KMK firmware
+MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary encoder, an OLED display, and RGB lighting. It's powered by the Seeed Xiao RP2040 and running KMK firmware.
 
 ![Macropad Render](media/angledrender.png)
 
@@ -29,7 +29,7 @@ MacropadV1 is a custom-designed 6-key mechanical macropad featuring a rotary enc
 | **Case** | 1 | 3D Printed Case |
 
 ### Case Design
-The project includes a custom 3D printable case designed for a sleek, low-profile look.
+Designed in Autodesk Fusion, the project includes a custom 3D printable case designed for a sleek, low-profile look.
 
 | Case Angled View | Case Back View |
 | :---: | :---: |
